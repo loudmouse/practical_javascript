@@ -45,6 +45,19 @@
 //   displayTodos();
 // }
 
+// # array to store todos
+// todos = ['item one', 'item two', 'item three']
+// #add an item to list
+// todos.push('item four')
+// # display the list
+// puts todos
+// # update the list
+// todos[0] = 'changed item'
+// puts "------"
+// puts todos
+// todos.slice!(0, 2)
+// puts "------"
+// puts todos
 
 
 
@@ -78,31 +91,29 @@
 
 
 
-
-
-
-
-
-climbingGyms = ["BKB Chicago", "First Ascent Uptown", "Vertical Endeavors"]
-
-function displayClimbingGyms() {
-  console.log(climbingGyms);
-}
-
-function addClimbingGym(newGym) {
-  climbingGyms.push(newGym);
-  console.log(climbingGyms);
-}
-
-function changeClimbingGym(position, newGym) {
-  climbingGyms[position] = newGym;
-  console.log(climbingGyms);
-}
-
-function deleteClimbingGym(position) {
-  climbingGyms.splice(position, 1);
-  console.log(climbingGyms);
-}
+// store the climbing gyms array on an object
+gymList = {
+  climbingGyms = ["BKB Chicago", "First Ascent Uptown", "Vertical Endeavors"],
+  // function to display gyms
+  displayClimbingGyms: function() {
+    console.log("Climbing gyms I'd like to visit:", climbingGyms);
+  },
+  // function to add a gym
+  addClimbingGym: function(newGym) {
+    this.climbingGyms.push(newGym);
+    this.displayClimbingGyms();
+  },
+  // function to change a gym
+  changeClimbingGym: function(position, newGym) {
+    this.climbingGyms[position] = newGym;
+    this.displayClimbingGyms();
+  },
+  // function to delete a gym
+  deleteClimbingGym: function(position) {
+    this.climbingGyms.splice(position, 1);
+    this.displayClimbingGyms();
+  }
+};
 
 
 var myGuitar = {
