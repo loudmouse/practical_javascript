@@ -135,10 +135,14 @@ var gymList = {
   climbingGyms: [],
   // method to display gyms
   displayClimbingGyms: function() {
-    console.log("Climbing gyms I'd like to visit:");
-    for (var i = 0; i < this.climbingGyms.length; i++) {
-      num = i + 1
-      console.log(num, this.climbingGyms[i].newGymName)
+    if (this.climbingGyms.length === 0) {
+      console.log("Your gym list is empty.")
+    } else {
+      console.log("Climbing gyms I'd like to visit:");
+      for (var i = 0; i < this.climbingGyms.length; i++) {
+        num = i + 1
+        console.log(num, this.climbingGyms[i].newGymName)
+      }
     }
   },
   // method to add a gym
