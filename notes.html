@@ -118,7 +118,7 @@ var gymList = {
   },
   // method to change a gym
   changeClimbingGym: function(position, newGymName) {
-    this.climbingGyms[position] = newGymName;
+    this.climbingGyms[position].newGymName = newGymName;
     this.displayClimbingGyms();
   },
   // method to delete a gym
