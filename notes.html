@@ -136,12 +136,15 @@ var gymList = {
   // method to display gyms
   displayClimbingGyms: function() {
     if (this.climbingGyms.length === 0) {
-      console.log("Your gym list is empty.")
+      console.log("Your gym list is empty.");
     } else {
       console.log("Climbing gyms I'd like to visit:");
       for (var i = 0; i < this.climbingGyms.length; i++) {
-        num = i + 1
-        console.log(num, this.climbingGyms[i].newGymName)
+        if (this.climbingGyms[i].visited === true) {
+          console.log("(x)", this.climbingGyms[i].newGymName);
+        } else {
+            console.log("( )", this.climbingGyms[i].newGymName);
+        }
       }
     }
   },
