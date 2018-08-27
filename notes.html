@@ -94,8 +94,16 @@ for (var i = 0; i < 3; i++) {
 // i++                is shorthand
 
 
+var testArray = ["item1", "item2", "item3"];
+// looping over the items in the array
+for (var i = 0; i < 3; i++) {
+  console.log(testArray[i]);
+}
 
-
+// refactored to ensure the condition is dynamic to the number of items in the test testArray
+for (var i = 0; i < testArray.length; i++) {
+  console.log(testArray[i]);
+}
 
 
 
