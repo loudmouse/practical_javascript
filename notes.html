@@ -121,6 +121,11 @@ var gymList = {
     this.climbingGyms[position].newGymName = newGymName;
     this.displayClimbingGyms();
   },
+  // method to toggle visited property
+  toggleVisited: function(position) {
+    this.climbingGyms[position].visited = !this.climbingGyms[position].visited;
+    this.displayClimbingGyms();
+  },
   // method to delete a gym
   deleteClimbingGym: function(position) {
     this.climbingGyms.splice(position, 1);
