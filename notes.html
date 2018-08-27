@@ -103,19 +103,22 @@
 
 // store the climbing gyms array on an object
 var gymList = {
-  climbingGyms: ["BKB Chicago", "First Ascent Uptown", "Vertical Endeavors"],
+  climbingGyms: [],
   // method to display gyms
   displayClimbingGyms: function() {
     console.log("Climbing gyms I'd like to visit:", this.climbingGyms);
   },
   // method to add a gym
-  addClimbingGym: function(newGym) {
-    this.climbingGyms.push(newGym);
+  addClimbingGym: function(newGymName) {
+    this.climbingGyms.push({
+      newGymName: newGymName,
+      visited: false,
+    });
     this.displayClimbingGyms();
   },
   // method to change a gym
-  changeClimbingGym: function(position, newGym) {
-    this.climbingGyms[position] = newGym;
+  changeClimbingGym: function(position, newGymName) {
+    this.climbingGyms[position] = newGymName;
     this.displayClimbingGyms();
   },
   // method to delete a gym
