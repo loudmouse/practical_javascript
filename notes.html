@@ -103,10 +103,10 @@
 
 // store the climbing gyms array on an object
 var gymList = {
-  climbingGyms = ["BKB Chicago", "First Ascent Uptown", "Vertical Endeavors"],
+  climbingGyms: ["BKB Chicago", "First Ascent Uptown", "Vertical Endeavors"],
   // function to display gyms
   displayClimbingGyms: function() {
-    console.log("Climbing gyms I'd like to visit:", climbingGyms);
+    console.log("Climbing gyms I'd like to visit:", this.climbingGyms);
   },
   // function to add a gym
   addClimbingGym: function(newGym) {
