@@ -171,6 +171,31 @@ var gymList = {
   deleteClimbingGym: function(position) {
     this.climbingGyms.splice(position, 1);
     this.displayClimbingGyms();
+  },
+  // method to toggle all todos complete or vice versa
+  toggleAll: function() {
+    var totalGyms = this.climbingGyms.length;
+    var visitedGyms = 0;
+
+    // get number of visited gyms
+    for (var i = 0; i < totalGyms; i++) {
+      if (this.climbingGyms[i].visited === true) {
+        visitedGyms++;
+      }
+    }
+
+    // if all gyms are marked visited then toggle them all to unvisited
+    if (totalGyms === visitedGyms) {
+      for (var i = 0; i < totalGyms; i++) {
+        this.climbingGyms[i].visited = false;
+      }
+    // otherwise mark everything true
+    } else {
+      for (var i = 0; i < totalGyms; i++) {
+        this.climbingGyms[i].visited = true;
+      }
+    }
+    this.displayClimbingGyms();
   }
 };
 

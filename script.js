@@ -35,6 +35,7 @@ var todoList = {
     this.displayTodos();
   },
   toggleAll: function() {
+    debugger;
     var totalTodos = this.todos.length;
     var completedTodos = 0;
     // get number of completed Todos
@@ -47,6 +48,11 @@ var todoList = {
     if (completedTodos === totalTodos) {
       for (var i = 0; i < totalTodos; i++) {
         this.todos[i].completed = false;
+      }
+  // Case 2: otherwise make everything true
+    } else {
+      for (var i = 0; i < totalTodos; i++) {
+        this.todos[i].completed = true;
       }
     }
     this.displayTodos();
