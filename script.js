@@ -35,7 +35,6 @@ var todoList = {
     this.displayTodos();
   },
   toggleAll: function() {
-    debugger;
     var totalTodos = this.todos.length;
     var completedTodos = 0;
     // get number of completed Todos
@@ -64,4 +63,11 @@ var displayTodosButton = document.getElementById('displayTodosButton');
 // we want to run the displayTodos method when someone clicks the display todos button
 displayTodosButton.addEventListener('click', function() {
   todoList.displayTodos();
+});
+
+// we want to get access to the toggle all button
+var toggleAllButton = document.getElementById('toggleAllButton');
+// we want to run the toggleAll method when someone clicks the toggle all button
+toggleAllButton.addEventListener('click', function() {
+  todoList.toggleAll();
 });
