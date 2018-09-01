@@ -101,6 +101,7 @@ var view = {
     var todosUl = document.querySelector('ul');
 
     // event delegation
+    // https://stackoverflow.com/questions/1687296/what-is-dom-event-delegation
     todosUl.addEventListener('click', function(event) {
       // get the element that was clicked on
       var elementClicked = event.target;
