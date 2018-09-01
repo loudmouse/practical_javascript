@@ -100,3 +100,8 @@ var view = {
     return deleteButton;
   }
 };
+
+var todosUl = document.querySelector('ul');
+todosUl.addEventListener('click', function(event) {
+  console.log(event.target.parentNode.id);
+});
